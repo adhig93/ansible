@@ -1,0 +1,9 @@
+- name: test
+  hosts: all
+  tasks:
+  - name: Install Unzip
+    become: true
+    apt:
+      name: unzip
+      state: absent
+      update_cache: yes
